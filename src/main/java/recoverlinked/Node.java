@@ -31,10 +31,10 @@ public class Node {
     public Node() {
     }
     public void print(){
-        Node cur=this.next;
+        Node cur=this;
         while(cur!=null){
-            System.out.printf(cur.toString());
-            cur = this.next;
+            System.out.println(cur.toString());
+            cur = cur.next;
         }
     }
 

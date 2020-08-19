@@ -8,7 +8,7 @@ import java.util.concurrent.locks.StampedLock;
 
 /**
  * @program: arithmetic
- * @description: 最近最久未使用<p>
+ *最近最久未使用<p>
  *     思路：最近最久未使用 根据set 的先后顺序将
  *     数据存在链表中，当set一个新数据
  *     但是缓存超过capacity（容量）这时候要删除最久未使用的缓存之值

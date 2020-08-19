@@ -4,16 +4,23 @@ package recoverlinked;
  * @author tmz
  * @since 08/18
  * @version 1.0
- * @deprecated  <p>单向链表进行反单向链表</p>
+ * <p>单向链表进行反单向链表</p>
  */
 public class Main {
     public static void main(String[] args) {
         Node node = new Node();
         node.setData(1);
         node.setNext(new Node(2,new Node(3,null)));
-//        node.print();
-        recover(node);
+        node.print();
+        recover(node).print();
     }
+    /**
+     * @author tmz
+     * @description
+     * @date 8:49 2020/8/19
+     * @param node
+     * @return recoverlinked.Node
+     */
     private static Node recover(Node node){
         if (node==null||null==node.getNext()){
             return node;
@@ -27,6 +34,6 @@ public class Main {
             pre = curr;//前置指针移动到当前节点
             curr = next;//下一个
         }
-        return pre;
+        return curr;
     }
 }
